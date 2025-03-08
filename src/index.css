@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-purple-primary: #9333ea;   /* Morado vibrante como color principal */
+  --color-purple-light: #a855f7;     /* Morado más claro para hover */
+  --color-purple-dark: #7e22ce;      /* Morado más oscuro para elementos activos */
+  --color-purple-soft: #d8b4fe;      /* Morado suave para elementos secundarios */
+  --color-bg-dark: #121212;          /* Fondo oscuro casi negro */
+  --color-bg-light: #1e1e1e;         /* Gris muy oscuro para elementos */
+  --color-text-primary: #f9fafb;     /* Texto principal blanco */
+  --color-text-secondary: #d1d5db;   /* Texto secundario gris claro */
+}
+
+/* Estilos base para comportamiento responsive */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased text-gray-100;
+  background-color: var(--color-bg-dark);
+  -webkit-tap-highlight-color: transparent;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.15) 0%, transparent 50%);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Techno house inspired elements */
+.techno-grid-bg {
+  background-image: linear-gradient(rgba(147, 51, 234, 0.2) 1px, transparent 1px),
+                   linear-gradient(90deg, rgba(147, 51, 234, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center center;
+}
+
+.techno-gradient {
+  background: linear-gradient(90deg, #9333ea, #4f46e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.techno-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.techno-border::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-purple-primary), transparent);
+}
+
+/* Pulse animation for techno elements */
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 5px 0 rgba(147, 51, 234, 0.4);
+  }
+  50% { 
+    box-shadow: 0 0 20px 5px rgba(147, 51, 234, 0.7);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 4s infinite ease-in-out;
+}
+
+/* Ocultar el scrollbar en webkit browsers */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-purple-primary);
+  @apply rounded-full hover:bg-purple-400;
+}
+
+.glitch-text {
+  text-shadow: 0.05em 0 0 rgba(255, 0, 255, 0.75),
+               -0.025em -0.05em 0 rgba(0, 255, 255, 0.75),
+               0.025em 0.05em 0 rgba(255, 255, 0, 0.75);
+  animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 255, 0.75),
+                -0.025em -0.05em 0 rgba(0, 255, 255, 0.75),
+                0.025em 0.05em 0 rgba(255, 255, 0, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 255, 0.75),
+                0.025em 0.025em 0 rgba(0, 255, 255, 0.75),
+                -0.05em -0.05em 0 rgba(255, 255, 0, 0.75);
+  }
+  50% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 255, 0.75),
+                -0.025em -0.05em 0 rgba(0, 255, 255, 0.75),
+                0.025em 0.05em 0 rgba(255, 255, 0, 0.75);
+  }
+}
