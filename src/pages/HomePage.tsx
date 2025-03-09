@@ -3,6 +3,7 @@ import { Hero } from '../components/Hero';
 import { Services } from '../components/Services';
 import { About } from '../components/About';
 import { Portfolio } from '../components/Portfolio';
+import { SoftwareSolutions } from '../components/SoftwareSolutions';
 
 export function HomePage() {
   return (
@@ -10,6 +11,7 @@ export function HomePage() {
       <Hero />
       <div className="relative z-10">
         <Services />
+        <SoftwareSolutions />
         <Portfolio />
         <About />
       </div>
