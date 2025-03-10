@@ -1,13 +1,36 @@
 import React from 'react';
 import { Code, Cpu, Zap, Users, Globe, Award, Server, Database } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import '../styles/swiper.css';
 
 // Datos del equipo
-const teamMembers = [
+interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  image: string;
+  bio: string;
+  skills: string[];
+  social: {
+    linkedin: string;
+    twitter: string;
+    github: string;
+  };
+}
+
+const teamMembers: TeamMember[] = [
   {
+    id: "sarah-johnson",
     name: 'Sarah Johnson',
     role: 'CEO & Fundadora',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     bio: 'Visionaria tecnológica con más de 15 años de experiencia en transformación digital.',
+    skills: ['Liderazgo', 'Estrategia', 'Innovación'],
     social: {
       linkedin: '#',
       twitter: '#',
@@ -15,10 +38,12 @@ const teamMembers = [
     }
   },
   {
+    id: "michael-chen",
     name: 'Michael Chen',
     role: 'CTO',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     bio: 'Experto en IA y aprendizaje automático, liderando nuestras iniciativas de innovación.',
+    skills: ['IA', 'ML', 'Cloud'],
     social: {
       linkedin: '#',
       twitter: '#',
@@ -26,16 +51,70 @@ const teamMembers = [
     }
   },
   {
+    id: "emily-rodriguez",
     name: 'Emily Rodriguez',
     role: 'Directora de Diseño',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     bio: 'Especialista en UX enfocada en crear experiencias digitales intuitivas.',
+    skills: ['UX/UI', 'Diseño', 'Prototipado'],
     social: {
       linkedin: '#',
       twitter: '#',
       github: '#'
     }
   },
+  {
+    id: "david-wilson",
+    name: 'David Wilson',
+    role: 'Desarrollador Frontend',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    bio: 'Especialista en frameworks modernos y experiencias web de alto rendimiento.',
+    skills: ['React', 'TypeScript', 'UI/UX'],
+    social: {
+      linkedin: '#',
+      twitter: '#',
+      github: '#'
+    }
+  },
+  {
+    id: "maria-lopez",
+    name: 'María López',
+    role: 'Desarrolladora Backend',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    bio: 'Experta en arquitecturas escalables y sistemas distribuidos.',
+    skills: ['Node.js', 'Python', 'Microservicios'],
+    social: {
+      linkedin: '#',
+      twitter: '#',
+      github: '#'
+    }
+  },
+  {
+    id: "alex-thompson",
+    name: 'Alex Thompson',
+    role: 'DevOps Engineer',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    bio: 'Especialista en automatización y despliegue continuo de aplicaciones.',
+    skills: ['Docker', 'Kubernetes', 'AWS'],
+    social: {
+      linkedin: '#',
+      twitter: '#',
+      github: '#'
+    }
+  },
+  {
+    id: "sofia-garcia",
+    name: 'Sofía García',
+    role: 'Data Scientist',
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
+    bio: 'Analista de datos con experiencia en modelos predictivos y business intelligence.',
+    skills: ['Python', 'SQL', 'Estadística'],
+    social: {
+      linkedin: '#',
+      twitter: '#',
+      github: '#'
+    }
+  }
 ];
 
 // Datos de logros
@@ -421,67 +500,150 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* ===== SECCIÓN EQUIPO (WIDE CARDS) ===== */}
-      <section id="team" className="py-20 sm:py-24 w-full" aria-labelledby="team-heading">
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-8 lg:px-12">
-          <div className="text-center mb-12">
+      {/* ===== SECCIÓN EQUIPO (SLIDER PROFESIONAL) ===== */}
+      <section id="team" className="py-16 sm:py-20 w-full relative overflow-hidden" aria-labelledby="team-heading">
+        {/* Fondo con efecto de gradiente */}
+        <div className="absolute inset-0 bg-techno-grid opacity-10 pointer-events-none"></div>
+        <div className="absolute -top-40 right-0 w-96 h-96 bg-techno-purple/10 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
+        <div className="absolute -bottom-20 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
+        
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-10">
             <div className="inline-block mx-auto">
               <h2 id="team-heading" className="text-2xl sm:text-3xl font-extrabold text-white techno-border pb-2">
                 Nuestro Equipo
               </h2>
               <div className="h-0.5 w-2/3 bg-techno-purple mx-auto"></div>
             </div>
-            <p className="text-gray-300 max-w-2xl mx-auto mt-4">
+            <p className="text-gray-300 max-w-2xl mx-auto mt-4 text-base">
               Un grupo de expertos apasionados por la tecnología y la innovación, comprometidos con el éxito de tu empresa.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 gap-8 sm:gap-12 md:grid-cols-3">
-            {teamMembers.map((member) => (
-              <div
-                key={member.name}
-                className="group relative bg-techno-light/30 backdrop-blur-sm rounded-lg overflow-hidden border border-techno-purple/20 hover:border-techno-purple/50 hover:shadow-techno-sm transition-all h-full"
-              >
-                <div className="absolute top-0 left-0 w-full h-full bg-techno-grid opacity-5 rounded-lg pointer-events-none"></div>
-                
-                <div className="relative">
-                  <div className="aspect-w-16 aspect-h-9 sm:aspect-w-3 sm:aspect-h-4">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="object-cover w-full h-60 object-center group-hover:scale-105 transition-transform duration-500"
-                    />
+          {/* Slider de equipo con Swiper - Tamaño equilibrado */}
+          <div className="relative mt-10 team-slider-container">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={20}
+              centeredSlides={false}
+              loop={true}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                500: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                1200: { slidesPerView: 3 }
+              }}
+              navigation={{
+                prevEl: '.team-swiper-button-prev',
+                nextEl: '.team-swiper-button-next',
+              }}
+              pagination={{
+                clickable: true,
+                el: '.team-swiper-pagination'
+              }}
+              modules={[Navigation, Pagination, Autoplay]}
+              className="team-swiper py-8"
+            >
+              {teamMembers.map((member) => (
+                <SwiperSlide key={member.name}>
+                  <div className="h-full group relative bg-techno-light/30 backdrop-blur-sm rounded-lg overflow-hidden border border-techno-purple/20 hover:border-techno-purple/50 hover:shadow-techno-md transition-all duration-300">
+                    <div className="absolute top-0 left-0 w-full h-full bg-techno-grid opacity-5 rounded-lg pointer-events-none"></div>
+                    
+                    {/* Contenedor de imagen mejorado */}
+                    <div className="relative h-64 overflow-hidden">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="object-cover w-full h-full object-center group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-techno-dark via-techno-dark/10 to-transparent pointer-events-none"></div>
+                    </div>
+                    
+                    <div className="p-4 relative">
+                      <h3 className="text-base sm:text-lg font-semibold text-white group-hover:text-techno-purple transition-colors">
+                        {member.name}
+                      </h3>
+                      <p className="text-sm text-techno-purple mb-2">{member.role}</p>
+                      <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors line-clamp-2 mb-3">{member.bio}</p>
+                      
+                      {/* Habilidades */}
+                      <div className="mt-2 mb-3">
+                        <div className="flex flex-wrap gap-1.5">
+                          {member.skills.map((skill: string, idx: number) => (
+                            <span key={idx} className="text-xs px-2 py-0.5 rounded-full bg-techno-purple/20 text-white border border-techno-purple/30">
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      <div className="flex justify-between items-center mt-3">
+                        {/* Redes sociales */}
+                        <div className="flex space-x-3">
+                          <a href={member.social.linkedin} className="text-gray-400 hover:text-techno-purple transition-colors" aria-label={`LinkedIn de ${member.name}`}>
+                            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
+                            </svg>
+                          </a>
+                          <a href={member.social.twitter} className="text-gray-400 hover:text-techno-purple transition-colors" aria-label={`Twitter de ${member.name}`}>
+                            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                            </svg>
+                          </a>
+                          <a href={member.social.github} className="text-gray-400 hover:text-techno-purple transition-colors" aria-label={`GitHub de ${member.name}`}>
+                            <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                              <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+                            </svg>
+                          </a>
+                        </div>
+                        
+                        {/* Botón de perfil */}
+                        <Link 
+                           to={`/team/${member.id}`}
+                          className="inline-flex items-center px-3 py-1.5 text-sm font-medium rounded-md bg-techno-purple/20 border border-techno-purple/30 text-white hover:bg-techno-purple hover:text-white transition-all"
+                        >
+                          <span>Ver perfil</span>
+                          <svg className="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-techno-dark via-transparent to-transparent"></div>
-                </div>
-                
-                <div className="p-6 sm:p-8 relative">
-                  <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-techno-purple transition-colors">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-techno-purple mb-2">{member.role}</p>
-                  <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">{member.bio}</p>
-                  
-                  <div className="mt-4 flex space-x-3">
-                    <a href={member.social.linkedin} className="text-gray-400 hover:text-techno-purple transition-colors" aria-label={`LinkedIn de ${member.name}`}>
-                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
-                      </svg>
-                    </a>
-                    <a href={member.social.twitter} className="text-gray-400 hover:text-techno-purple transition-colors" aria-label={`Twitter de ${member.name}`}>
-                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                      </svg>
-                    </a>
-                    <a href={member.social.github} className="text-gray-400 hover:text-techno-purple transition-colors" aria-label={`GitHub de ${member.name}`}>
-                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            
+            {/* Controles de navegación personalizados */}
+            <button className="team-swiper-button-prev absolute top-1/2 left-0 z-10 transform -translate-y-1/2 -translate-x-1/2 bg-techno-purple/80 text-white w-9 h-9 rounded-full flex items-center justify-center focus:outline-none hover:bg-techno-purple transition-colors md:-translate-x-0">
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+            </button>
+            <button className="team-swiper-button-next absolute top-1/2 right-0 z-10 transform -translate-y-1/2 translate-x-1/2 bg-techno-purple/80 text-white w-9 h-9 rounded-full flex items-center justify-center focus:outline-none hover:bg-techno-purple transition-colors md:translate-x-0">
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+            
+            {/* Paginación personalizada */}
+            <div className="team-swiper-pagination flex justify-center mt-6"></div>
+          </div>
+          
+          {/* Botón para ver todo el equipo */}
+          <div className="mt-10 text-center">
+            <Link 
+              to="/team" 
+              className="inline-flex items-center px-5 py-2.5 bg-techno-purple/20 hover:bg-techno-purple/30 border border-techno-purple text-white rounded-lg transition-all group shadow-techno-sm hover:shadow-techno-md"
+            >
+              <span className="mr-2">Conoce a todo nuestro equipo</span>
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

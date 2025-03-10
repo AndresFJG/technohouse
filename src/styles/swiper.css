@@ -1,0 +1,25 @@
+/* Estilos para el slider del equipo */
+.team-slider-container .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(135, 28, 219, 0.2);
+    opacity: 1;
+    border: 1px solid rgba(135, 28, 219, 0.3);
+  }
+  
+  .team-slider-container .swiper-pagination-bullet-active {
+    background-color: rgba(135, 28, 219, 0.8);
+  }
+  
+  .team-swiper {
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  /* Estilos para tarjetas con altura igual */
+  .team-swiper .swiper-slide {
+    height: auto;
+  }
