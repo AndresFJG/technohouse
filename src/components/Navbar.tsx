@@ -40,6 +40,7 @@ export function Navbar() {
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -76,9 +77,6 @@ export function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Button variant="techno" size="sm" glow>
-              Get Started
-            </Button>
           </div>
 
           {/* Mobile Navigation Button */}

@@ -83,7 +83,7 @@ export function SoftwareSolutions() {
       {/* Badge superior */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="inline-block bg-techno-purple/20 text-techno-purple rounded-full px-4 py-2 mb-6 backdrop-blur-sm border border-techno-purple/30">
-          3. Soluciones
+        Soluciones
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:items-center">
