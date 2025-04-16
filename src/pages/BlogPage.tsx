@@ -18,40 +18,40 @@ import {
 const blogPosts = [
   {
     id: 1,
-    title: "Lanzamiento de nuestro nuevo servicio de IA predictiva",
-    excerpt: "Descubre cómo nuestra nueva plataforma de inteligencia artificial puede transformar tus datos en predicciones accionables y precisas para tu negocio.",
+    title: "Lanzamiento de nuestra nueva plataforma de IA predictiva",
+    excerpt: "Descubre cómo nuestra nueva tecnología de inteligencia artificial puede transformar tus datos en predicciones precisas, con el ritmo y la precisión de la música electrónica.",
     date: "15 Junio, 2023",
     readTime: "5 min",
     author: {
       name: "Carlos Mendoza",
       avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-      role: "CTO"
+      role: "Director de Tecnología"
     },
     image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop",
-    category: "Inteligencia Artificial",
-    tags: ["IA", "Machine Learning", "Predicción", "Datos"],
+    category: "Tecnología",
+    tags: ["IA", "Innovación", "Tech", "Desarrollo"],
     featured: true
   },
   {
     id: 2,
-    title: "Reconocidos como líderes en innovación tecnológica 2023",
-    excerpt: "Nuestra empresa ha sido reconocida como líder en innovación tecnológica por la prestigiosa revista TechInnovation en su ranking anual de 2023.",
+    title: "Techno House reconocida como startup más innovadora 2023",
+    excerpt: "Nuestra fusión única de tecnología y cultura musical electrónica nos ha valido el reconocimiento como la startup más innovadora del año.",
     date: "3 Mayo, 2023",
     readTime: "3 min",
     author: {
       name: "Laura Martínez",
       avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-      role: "CEO"
+      role: "Directora General"
     },
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop",
     category: "Reconocimientos",
-    tags: ["Premios", "Innovación", "Tecnología"],
+    tags: ["Premios", "Innovación", "Startup"],
     featured: true
   },
   {
     id: 3,
-    title: "Expansión de operaciones en Latinoamérica",
-    excerpt: "Estamos emocionados de anunciar la apertura de nuestras nuevas oficinas en Ciudad de México, Santiago y Bogotá, fortaleciendo nuestra presencia en la región.",
+    title: "Expansión de Techno House en Latinoamérica",
+    excerpt: "Estamos emocionados de anunciar la apertura de nuestras nuevas oficinas en Ciudad de México, Santiago y Bogotá, llevando nuestra innovación tecnológica a la región.",
     date: "21 Abril, 2023",
     readTime: "4 min",
     author: {
@@ -60,40 +60,40 @@ const blogPosts = [
       role: "Director de Expansión"
     },
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
-    category: "Empresa",
-    tags: ["Expansión", "Latinoamérica", "Crecimiento"],
+    category: "Expansión",
+    tags: ["Crecimiento", "Latinoamérica", "Tecnología"],
     featured: false
   },
   {
     id: 4,
-    title: "Tendencias en desarrollo web para 2023",
-    excerpt: "Analizamos las tecnologías y enfoques que están definiendo el desarrollo web este año y que seguirán siendo relevantes en el futuro próximo.",
+    title: "Tendencias en música techno para 2023",
+    excerpt: "Analizamos los sonidos y estilos que están definiendo la escena techno este año y que seguirán siendo relevantes en el futuro próximo.",
     date: "15 Marzo, 2023",
     readTime: "6 min",
     author: {
       name: "Ana López",
       avatar: "https://randomuser.me/api/portraits/women/22.jpg",
-      role: "Lead Developer"
+      role: "Directora Musical"
     },
     image: "https://images.unsplash.com/photo-1573867639040-6dd25fa5f597?q=80&w=800&auto=format&fit=crop",
-    category: "Desarrollo Web",
-    tags: ["Tendencias", "Desarrollo", "Web", "2023"],
+    category: "Música",
+    tags: ["Tendencias", "Techno", "House", "2023"],
     featured: false
   },
   {
     id: 5,
-    title: "Optimización de aplicaciones con componentes serverless",
-    excerpt: "Descubre cómo la arquitectura serverless puede mejorar el rendimiento y escalabilidad de tus aplicaciones mientras reduces costos operativos.",
+    title: "Optimización de eventos con tecnología de última generación",
+    excerpt: "Descubre cómo nuestra tecnología de vanguardia mejora la experiencia del público mientras reduce costos operativos.",
     date: "28 Febrero, 2023",
     readTime: "7 min",
     author: {
       name: "David Ramírez",
       avatar: "https://randomuser.me/api/portraits/men/67.jpg",
-      role: "Cloud Architect"
+      role: "Director Técnico"
     },
     image: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=800&auto=format&fit=crop",
-    category: "Cloud Computing",
-    tags: ["Serverless", "Optimización", "Cloud", "Rendimiento"],
+    category: "Tecnología",
+    tags: ["Eventos", "Innovación", "Experiencia", "Sonido"],
     featured: false
   },
   {
@@ -111,37 +111,51 @@ const blogPosts = [
     category: "Seguridad",
     tags: ["DevSecOps", "Seguridad", "DevOps", "Mejores prácticas"],
     featured: false
+  },
+  {
+    id: 7,
+    title: "Revolucionando la eficiencia operativa: Nuestro caso de éxito en automatización",
+    excerpt: "Descubre cómo implementamos una solución de automatización que redujo los tiempos de procesamiento en un 75% y aumentó la precisión en un 99.9% para uno de nuestros clientes líderes.",
+    date: "25 Enero, 2024",
+    readTime: "6 min",
+    author: {
+      name: "Daniel López",
+      avatar: "https://randomuser.me/api/portraits/men/67.jpg",
+      role: "Lead Developer"
+    },
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+    category: "Automatización",
+    tags: ["Automatización", "IA", "Eficiencia", "Transformación Digital", "Caso de Éxito"],
+    featured: true
   }
 ];
 
 // Datos de categorías
 const categories = [
-  { name: "Inteligencia Artificial", count: 12 },
-  { name: "Desarrollo Web", count: 24 },
-  { name: "Cloud Computing", count: 18 },
-  { name: "Seguridad", count: 15 },
-  { name: "Empresa", count: 9 },
-  { name: "Reconocimientos", count: 6 },
-  { name: "Tendencias", count: 21 }
+  { name: "Tecnología", count: 12 },
+  { name: "Innovación", count: 24 },
+  { name: "Desarrollo", count: 18 },
+  { name: "Empresa", count: 15 },
+  { name: "Cultura Tech", count: 21 }
 ];
 
 // Datos de artículos populares
 const popularPosts = [
   {
     id: 101,
-    title: "La revolución del blockchain en las finanzas empresariales",
+    title: "La revolución de la IA en el desarrollo de software",
     image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=300&auto=format&fit=crop",
     date: "5 Enero, 2023"
   },
   {
     id: 102,
-    title: "Diseño UX para aplicaciones de inteligencia artificial",
+    title: "Cómo la música electrónica inspira nuestra metodología ágil",
     image: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=300&auto=format&fit=crop",
     date: "18 Diciembre, 2022"
   },
   {
     id: 103,
-    title: "Automatización de pruebas: Mejores herramientas en 2023",
+    title: "El futuro del desarrollo web: tendencias 2023",
     image: "https://images.unsplash.com/photo-1564865878688-9a244444042a?q=80&w=300&auto=format&fit=crop",
     date: "30 Noviembre, 2022"
   }
@@ -177,7 +191,7 @@ export function BlogPage() {
           <div className="inline-block mx-auto">
             <div className="flex items-center justify-center gap-2 mb-3">
               <span className="h-px w-8 bg-techno-purple"></span>
-              <span className="text-techno-purple text-sm tracking-wider font-mono uppercase">Nuestro Blog</span>
+              <span className="text-techno-purple text-sm tracking-wider font-mono uppercase">Blog Techno House</span>
               <span className="h-px w-8 bg-techno-purple"></span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-white sm:text-5xl">
@@ -186,7 +200,7 @@ export function BlogPage() {
             <div className="h-0.5 w-1/3 bg-techno-purple mt-4 mx-auto"></div>
           </div>
           <p className="mt-6 text-lg text-gray-300 max-w-3xl mx-auto">
-            Mantente al día con las últimas tendencias tecnológicas, noticias de la empresa y consejos para impulsar tu negocio en la era digital.
+            Mantente al día con las últimas tendencias en tecnología, innovación y desarrollo de software, con el ritmo único de Techno House.
           </p>
         </div>
         

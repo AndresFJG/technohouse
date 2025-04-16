@@ -58,7 +58,7 @@ export function Navbar() {
                 <Zap className="w-6 h-6 text-techno-purple group-hover:text-techno-purple-light transition-colors" />
                 <div className="absolute inset-0 rounded-md border border-techno-purple/50 group-hover:border-techno-purple group-hover:shadow-techno-sm transition-all"></div>
               </div>
-              <span className="techno-gradient text-xl font-bold">TECHSOL</span>
+              <span className="techno-gradient text-xl font-bold">TECHNO HOUSE</span>
             </Link>
           </div>
 
@@ -113,11 +113,6 @@ export function Navbar() {
               {item.name}
             </Link>
           ))}
-          <div className="pt-2">
-            <Button variant="techno" size="sm" className="w-full" glow>
-              Get Started
-            </Button>
-          </div>
         </div>
       </div>
     </nav>

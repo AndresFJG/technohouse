@@ -11,6 +11,8 @@ import { NotFound } from './pages/NotFound';
 import TeamPage from './pages/TeamPage';
 import TeamMemberPage from './pages/TeamMemberPage';
 import BlogPage from './pages/BlogPage';
+import ProjectView from './components/ProjectView';
+import ProjectsPage from './pages/ProjectsPage';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
             <Route path="contact" element={<ContactPage />} />
             <Route path="team" element={<TeamPage />} />
             <Route path="team/:id" element={<TeamMemberPage />} />
+            <Route path="project/:id" element={<ProjectView />} />
+            <Route path="projects" element={<ProjectsPage />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

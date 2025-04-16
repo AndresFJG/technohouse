@@ -3,14 +3,12 @@ import { Link } from 'react-router-dom';
 import { Hero } from '../components/Hero';
 import { 
   ArrowRight, 
-  Zap, 
+
   CheckCircle, 
   Users, 
   Award, 
   BarChart3,
   Code,
-  Database,
-  Server,
   Plus,
   Minus,
   ChevronRight,
@@ -18,7 +16,6 @@ import {
   Globe,
   Briefcase,
   LayoutGrid,
-  Cpu,
   ShieldCheck,
   Smartphone,
   BrainCircuit,
@@ -28,10 +25,10 @@ import {
 export function HomePage() {
   // Datos para las estadísticas
   const stats = [
-    { id: 1, value: '200+', label: 'Proyectos completados', icon: CheckCircle },
-    { id: 2, value: '95%', label: 'Clientes satisfechos', icon: Users },
-    { id: 3, value: '12+', label: 'Años de experiencia', icon: Award },
-    { id: 4, value: '40%', label: 'Crecimiento anual', icon: BarChart3 }
+    { id: 1, value: '50+', label: 'Proyectos completados', icon: CheckCircle },
+    { id: 2, value: '98%', label: 'Clientes satisfechos', icon: Users },
+    { id: 3, value: '3+', label: 'Años de experiencia', icon: Award },
+    { id: 4, value: '200%', label: 'Crecimiento anual', icon: BarChart3 }
   ];
 
   // Servicios principales
@@ -39,72 +36,44 @@ export function HomePage() {
     {
       id: 1,
       title: "Desarrollo de Software a Medida",
-      description: "Creamos soluciones personalizadas que se adaptan perfectamente a los procesos y necesidades específicas de tu negocio.",
+      description: "En Techno House creamos soluciones personalizadas que se adaptan perfectamente a los procesos y necesidades específicas de tu negocio, utilizando las últimas tecnologías.",
       icon: Code,
       color: "from-blue-600 to-techno-purple"
     },
     {
       id: 2,
-      title: "Consultoría en Transformación Digital",
-      description: "Asesoramos en la implementación de tecnologías disruptivas para optimizar procesos y aumentar la competitividad.",
+      title: "Automatización de procesos con IA",
+      description: "Implementamos soluciones de IA que optimizan tus operaciones, reducen errores y aumentan la eficiencia hasta en un 75%, como demostramos en nuestro último caso de éxito.",
       icon: LayoutGrid,
       color: "from-green-500 to-techno-purple"
     },
     {
       id: 3,
       title: "Inteligencia Artificial y Machine Learning",
-      description: "Aplicamos algoritmos avanzados para analizar datos y generar insights accionables para tu empresa.",
+      description: "Aplicamos algoritmos avanzados de IA para analizar datos y generar insights accionables que impulsan la toma de decisiones en tu empresa.",
       icon: BrainCircuit,
       color: "from-purple-600 to-techno-purple"
     },
     {
       id: 4,
       title: "Desarrollo Web y Móvil",
-      description: "Diseñamos experiencias digitales intuitivas y atractivas que conectan con tus usuarios y potencian tu marca.",
+      description: "Diseñamos experiencias digitales intuitivas y atractivas que conectan con tus usuarios y potencian tu marca en el mundo digital.",
       icon: Smartphone,
       color: "from-orange-500 to-techno-purple"
     },
     {
       id: 5,
       title: "Ciberseguridad",
-      description: "Protegemos tus activos digitales con estrategias avanzadas de seguridad y cumplimiento normativo.",
+      description: "Protegemos tus activos digitales con estrategias avanzadas de seguridad y cumplimiento normativo, garantizando la integridad de tus datos.",
       icon: ShieldCheck,
       color: "from-red-500 to-techno-purple"
     },
     {
       id: 6,
       title: "Servicios Cloud",
-      description: "Optimizamos tu infraestructura tecnológica con soluciones escalables, seguras y rentables.",
+      description: "Optimizamos tu infraestructura tecnológica con soluciones cloud escalables, seguras y rentables, adaptadas a tus necesidades específicas.",
       icon: CloudCog,
       color: "from-cyan-500 to-techno-purple"
-    }
-  ];
-
-  // Testimonios de clientes
-  const testimonials = [
-    {
-      id: 1,
-      quote: "Su equipo transformó completamente nuestras operaciones digitales en tiempo récord. Altamente recomendado.",
-      author: "Ana García",
-      position: "CEO, TechCorp",
-      company: "TechCorp",
-      avatar: "https://randomuser.me/api/portraits/women/32.jpg"
-    },
-    {
-      id: 2,
-      quote: "La implementación de IA que desarrollaron para nosotros ha incrementado nuestra eficiencia operativa en un 35%.",
-      author: "Miguel Rodríguez",
-      position: "Director de Innovación",
-      company: "Global Finance",
-      avatar: "https://randomuser.me/api/portraits/men/45.jpg"
-    },
-    {
-      id: 3,
-      quote: "Entregaron un producto que superó todas nuestras expectativas. Su enfoque en la experiencia de usuario es extraordinario.",
-      author: "Laura Martínez",
-      position: "Directora de Producto",
-      company: "NexGen Apps",
-      avatar: "https://randomuser.me/api/portraits/women/68.jpg"
     }
   ];
 
@@ -112,7 +81,7 @@ export function HomePage() {
   const newsItems = [
     {
       id: 1,
-      title: "Lanzamiento de nuestro nuevo servicio de IA predictiva",
+      title: "Lanzamiento de nuestro nuevo servicio de Automatización con IA",
       date: "15 Junio, 2023",
       thumbnail: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=300&auto=format&fit=crop"
     },
@@ -134,22 +103,22 @@ export function HomePage() {
   const caseStudies = [
     {
       id: 1,
-      title: "Transformación digital de ACME Corp",
-      description: "Implementamos una solución integral que digitalizó todos los procesos clave, reduciendo costos operativos en un 42%.",
+      title: "Transformación digital de TechCorp",
+      description: "Implementamos una solución integral que digitalizó todos los procesos clave, reduciendo costos operativos en un 42% y aumentando la eficiencia en un 65%.",
       image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop",
-      industry: "Manufactura",
+      industry: "Tecnología",
       results: {
-        efficiency: "+42%",
-        costs: "-37%",
-        productivity: "+28%"
+        efficiency: "+65%",
+        costs: "-42%",
+        productivity: "+58%"
       },
       icon: Building2,
       color: "from-blue-600/20 to-techno-purple/20"
     },
     {
       id: 2,
-      title: "Plataforma e-commerce para Global Retail",
-      description: "Desarrollamos una robusta plataforma de comercio electrónico que incrementó las ventas online un 156% en 6 meses.",
+      title: "Plataforma e-commerce para RetailPro",
+      description: "Desarrollamos una robusta plataforma de comercio electrónico que incrementó las ventas online un 156% en 6 meses y mejoró la experiencia del usuario.",
       image: "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=800&auto=format&fit=crop",
       industry: "Retail",
       results: {
@@ -162,8 +131,8 @@ export function HomePage() {
     },
     {
       id: 3,
-      title: "Sistema inteligente para FinTech Solutions",
-      description: "Creamos un sistema de IA para detección de fraudes que redujo incidentes en un 92%, ahorrando millones anualmente.",
+      title: "Sistema de IA para FinTech Solutions",
+      description: "Creamos un sistema de IA para detección de fraudes que redujo incidentes en un 92%, ahorrando millones anualmente y mejorando la seguridad.",
       image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=800&auto=format&fit=crop",
       industry: "Finanzas",
       results: {
@@ -181,24 +150,24 @@ export function HomePage() {
   
   const faqs = [
     {
-      question: "¿Qué servicios tecnológicos ofrecen?",
-      answer: "Ofrecemos una amplia gama de servicios tecnológicos que incluyen desarrollo de software a medida, consultoría en transformación digital, implementación de soluciones de IA y machine learning, desarrollo web y móvil, ciberseguridad, y servicios cloud. Adaptamos nuestras soluciones a las necesidades específicas de cada cliente para maximizar el impacto y el retorno de inversión."
+      question: "¿Qué hace diferente a Techno House de otras empresas de desarrollo?",
+      answer: "En Techno House nos destacamos por nuestra combinación única de experiencia técnica, enfoque en resultados y atención personalizada. Nuestro equipo de expertos trabaja estrechamente con cada cliente para entender sus necesidades específicas y desarrollar soluciones que generen un impacto real en su negocio. Además, mantenemos un compromiso constante con la innovación y la excelencia en cada proyecto."
     },
     {
       question: "¿Cuánto tiempo tarda desarrollar un proyecto típico?",
-      answer: "La duración de un proyecto varía según su complejidad y alcance. Proyectos pequeños pueden completarse en 4-6 semanas, mientras que los proyectos más complejos pueden llevar de 3 a 6 meses. Durante nuestra fase inicial de descubrimiento, establecemos un cronograma detallado con hitos claros para garantizar una entrega puntual y dentro del presupuesto."
+      answer: "La duración varía según la complejidad y alcance del proyecto. En Techno House, los proyectos pequeños pueden completarse en 4-6 semanas, mientras que los más complejos pueden llevar de 3 a 6 meses. Durante nuestra fase inicial de descubrimiento, establecemos un cronograma detallado con hitos claros para garantizar una entrega puntual y dentro del presupuesto."
     },
     {
       question: "¿Trabajan con empresas de cualquier tamaño?",
-      answer: "Sí, trabajamos con empresas de todos los tamaños, desde startups y PyMEs hasta grandes corporaciones. Nuestro enfoque se adapta a las necesidades específicas y presupuesto de cada cliente, asegurando que todas las organizaciones puedan beneficiarse de soluciones tecnológicas de alta calidad que impulsarán su crecimiento."
+      answer: "Sí, en Techno House trabajamos con empresas de todos los tamaños, desde startups y PyMEs hasta grandes corporaciones. Nuestro enfoque se adapta a las necesidades específicas y presupuesto de cada cliente, asegurando que todas las organizaciones puedan beneficiarse de soluciones tecnológicas de alta calidad que impulsarán su crecimiento."
     },
     {
       question: "¿Cómo garantizan la calidad de sus entregables?",
-      answer: "Implementamos rigurosos controles de calidad en todas las etapas del desarrollo. Esto incluye revisiones de código, pruebas automatizadas, pruebas de usuario y QA exhaustivo. Seguimos metodologías ágiles con ciclos de retroalimentación constantes. Además, todos nuestros proyectos incluyen un período de soporte posterior al lanzamiento para asegurar que todo funcione perfectamente."
+      answer: "En Techno House implementamos rigurosos controles de calidad en todas las etapas del desarrollo. Esto incluye revisiones de código, pruebas automatizadas, pruebas de usuario y QA exhaustivo. Seguimos metodologías ágiles con ciclos de retroalimentación constantes. Además, todos nuestros proyectos incluyen un período de soporte posterior al lanzamiento para asegurar que todo funcione perfectamente."
     },
     {
       question: "¿Ofrecen soporte continuo después de finalizar el proyecto?",
-      answer: "Absolutamente. Ofrecemos diversos planes de soporte y mantenimiento post-lanzamiento para garantizar que su solución siga funcionando óptimamente a largo plazo. Estos planes incluyen monitoreo proactivo, actualizaciones de seguridad, optimizaciones de rendimiento, y soporte técnico con diferentes niveles de SLA según las necesidades de su negocio."
+      answer: "Absolutamente. En Techno House ofrecemos diversos planes de soporte y mantenimiento post-lanzamiento para garantizar que su solución siga funcionando óptimamente a largo plazo. Estos planes incluyen monitoreo proactivo, actualizaciones de seguridad, optimizaciones de rendimiento, y soporte técnico con diferentes niveles de SLA según las necesidades de su negocio."
     }
   ];
 
@@ -214,36 +183,22 @@ export function HomePage() {
       <div className="relative z-10">
         {/* 1. Sección CTA principal - Llamado a la acción destacado */}
         <section className="py-16 bg-gradient-to-b from-techno-dark to-techno-dark/95 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.15),transparent_70%)] pointer-events-none"></div>
+          <div className="absolute inset-0 bg-techno-grid opacity-20 pointer-events-none z-0"></div>
+          <div className="absolute top-1/3 left-1/4 w-1/3 h-1/3 rounded-full bg-techno-glow blur-3xl opacity-20 pointer-events-none z-0"></div>
           
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                  Potencia tu empresa con <span className="text-techno-purple">soluciones digitales</span> a medida
+                  Impulsa tu negocio con <span className="text-techno-purple">soluciones digitales</span> innovadoras
                 </h2>
                 <p className="text-lg text-gray-300 mb-8">
-                  Desarrollamos software innovador que resuelve problemas reales y acelera el crecimiento de tu negocio. Nuestro enfoque combina tecnología de vanguardia con estrategias centradas en resultados.
+                  En Techno House desarrollamos software innovador que resuelve problemas reales y acelera el crecimiento de tu empresa. Nuestro enfoque combina tecnología de vanguardia con estrategias orientadas a resultados.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-techno-purple hover:bg-techno-purple-light transition-colors duration-300"
-                  >
-                    Solicita una consulta gratuita
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                  <Link
-                    to="/services"
-                    className="inline-flex items-center justify-center px-6 py-3 border border-techno-purple rounded-md text-base font-medium text-white bg-transparent hover:bg-techno-light/20 transition-colors"
-                  >
-                    Explorar servicios
-                  </Link>
-                </div>
               </div>
               
               <div className="bg-techno-light/20 backdrop-blur-sm p-6 rounded-lg border border-techno-purple/30">
-                <h3 className="text-xl font-bold text-white mb-4">¿Listo para dar el siguiente paso?</h3>
+                <h3 className="text-xl font-bold text-white mb-4">¿Listo para transformar tu empresa?</h3>
                 <form className="space-y-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">Nombre</label>
@@ -255,12 +210,12 @@ export function HomePage() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">Correo electrónico</label>
                     <input 
                       type="email" 
                       id="email" 
                       className="w-full bg-techno-dark border border-techno-purple/30 focus:border-techno-purple rounded-md shadow-sm py-2 px-4 text-gray-100 focus:outline-none focus:ring-1 focus:ring-techno-purple transition-colors"
-                      placeholder="tu@ejemplo.com"
+                      placeholder="tu@correo.com"
                     />
                   </div>
                   <div>
@@ -780,8 +735,57 @@ export function HomePage() {
           </div>
         </section>
 
-        {/* 7. Sección FAQ - Información útil para resolver dudas */}
-        <section className="py-16 bg-gradient-to-b from-techno-dark to-techno-dark/95 relative overflow-hidden">
+        {/* 9. Noticias y actualizaciones recientes - Contenido actualizado para mostrar actividad */}
+        <section className="py-16 bg-gradient-to-b from-techno-dark/90 to-techno-dark">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center mb-10">
+              <div>
+                <span className="text-techno-purple text-sm tracking-wider font-mono uppercase">Últimas noticias</span>
+                <h2 className="text-2xl font-bold text-white">Novedades y actualizaciones</h2>
+              </div>
+              <Link to="/blog" className="text-techno-purple hover:text-techno-purple-light flex items-center">
+                Ver todas
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {newsItems.map((item) => (
+                <div key={item.id} className="group bg-techno-light/20 backdrop-blur-sm rounded-lg overflow-hidden border border-techno-purple/20 hover:border-techno-purple/40 transition-all">
+                  <div className="h-40 overflow-hidden">
+                    <img 
+                      src={item.thumbnail} 
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <div className="text-techno-purple text-sm mb-2">{item.date}</div>
+                    <h3 className="text-white font-medium text-lg mb-3 group-hover:text-techno-purple transition-colors">
+                      {item.title}
+                    </h3>
+                    <Link to={`/blog/${item.id}`} className="inline-flex items-center text-techno-purple hover:text-techno-purple-light text-sm font-medium">
+                      Leer más
+                      <ArrowRight className="ml-2 h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <div className="mt-12 text-center">
+              <Link 
+                to="/blog" 
+                className="inline-flex items-center px-6 py-3 border border-techno-purple rounded-md text-base font-medium text-white bg-techno-dark hover:bg-techno-light/20 transition-colors"
+              >
+                Explorar nuestro blog
+                <ChevronRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+         {/* 7. Sección FAQ - Información útil para resolver dudas */}
+         <section className="py-16 bg-gradient-to-b from-techno-dark to-techno-dark/95 relative overflow-hidden">
           <div className="absolute inset-0 bg-techno-grid opacity-10 pointer-events-none"></div>
           <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-[radial-gradient(ellipse_at_top_right,rgba(147,51,234,0.1),transparent_70%)] pointer-events-none"></div>
           
@@ -851,94 +855,6 @@ export function HomePage() {
           </div>
         </section>
 
-        {/* 8. CTA Secundario - Impulsar conversión */}
-        <section className="py-16 bg-techno-dark relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(147,51,234,0.15),transparent)] pointer-events-none"></div>
-          
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="bg-techno-light/30 backdrop-blur-sm rounded-xl overflow-hidden border border-techno-purple/30">
-              <div className="absolute top-0 left-0 w-full h-full bg-techno-grid opacity-5 rounded-lg pointer-events-none"></div>
-              
-              <div className="px-6 py-12 sm:px-12 lg:py-16 lg:px-16 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-techno-purple/20 mb-6">
-                  <Zap className="h-8 w-8 text-techno-purple" />
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
-                  ¿Listo para transformar tu <span className="text-techno-purple">futuro digital</span>?
-                </h2>
-                <p className="max-w-3xl mx-auto text-lg text-gray-300 mb-8">
-                  Contáctanos hoy para descubrir cómo nuestras soluciones tecnológicas pueden impulsar tu negocio al siguiente nivel.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center justify-center px-8 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-techno-purple hover:bg-techno-purple-light transition-colors duration-300"
-                  >
-                    Agenda una demostración gratuita
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                  <Link
-                    to="/portfolio"
-                    className="inline-flex items-center justify-center px-8 py-3 border border-techno-purple rounded-md text-base font-medium text-white bg-transparent hover:bg-techno-light/20 transition-colors"
-                  >
-                    Ver casos de éxito
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* 9. Noticias y actualizaciones recientes - Contenido actualizado para mostrar actividad */}
-        <section className="py-16 bg-gradient-to-b from-techno-dark/90 to-techno-dark">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center mb-10">
-              <div>
-                <span className="text-techno-purple text-sm tracking-wider font-mono uppercase">Últimas noticias</span>
-                <h2 className="text-2xl font-bold text-white">Novedades y actualizaciones</h2>
-              </div>
-              <Link to="/blog" className="text-techno-purple hover:text-techno-purple-light flex items-center">
-                Ver todas
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {newsItems.map((item) => (
-                <div key={item.id} className="group bg-techno-light/20 backdrop-blur-sm rounded-lg overflow-hidden border border-techno-purple/20 hover:border-techno-purple/40 transition-all">
-                  <div className="h-40 overflow-hidden">
-                    <img 
-                      src={item.thumbnail} 
-                      alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <div className="text-techno-purple text-sm mb-2">{item.date}</div>
-                    <h3 className="text-white font-medium text-lg mb-3 group-hover:text-techno-purple transition-colors">
-                      {item.title}
-                    </h3>
-                    <Link to={`/blog/${item.id}`} className="inline-flex items-center text-techno-purple hover:text-techno-purple-light text-sm font-medium">
-                      Leer más
-                      <ArrowRight className="ml-2 h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            <div className="mt-12 text-center">
-              <Link 
-                to="/blog" 
-                className="inline-flex items-center px-6 py-3 border border-techno-purple rounded-md text-base font-medium text-white bg-techno-dark hover:bg-techno-light/20 transition-colors"
-              >
-                Explorar nuestro blog
-                <ChevronRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </section>
       </div>
     </main>
   );

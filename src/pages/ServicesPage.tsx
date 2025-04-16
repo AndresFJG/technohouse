@@ -1,5 +1,5 @@
 import React from 'react';
-import { Services } from '../components/Services';
+import Services from '../components/Services';
 import { 
   Clock, 
   Layers, 
@@ -308,7 +308,7 @@ export function ServicesPage() {
             
             <div className="relative mt-12 max-w-5xl mx-auto">
               {/* Línea conectora */}
-              <div className="absolute left-16 lg:left-1/2 top-0 h-full w-0.5 bg-techno-purple/20 hidden sm:block"></div>
+              <div className="absolute left-8 sm:left-1/2 top-0 h-full w-0.5 bg-techno-purple/20"></div>
               
               {/* Pasos del proceso */}
               <div className="space-y-16">
@@ -316,21 +316,16 @@ export function ServicesPage() {
                   const Icon = step.icon;
                   return (
                     <div key={step.id} className={`relative sm:grid sm:grid-cols-2 sm:items-center ${index % 2 === 0 ? '' : 'sm:grid-flow-dense'}`}>
-                      {/* Círculo con número para pantallas pequeñas */}
-                      <div className="sm:hidden absolute -left-4 top-1/2 -translate-y-1/2 flex items-center justify-center w-8 h-8 rounded-full bg-techno-dark border border-techno-purple">
-                        <span className="text-techno-purple text-sm font-bold">{step.id}</span>
+                      {/* Círculo con número (móvil y desktop) */}
+                      <div className="absolute left-8 sm:left-1/2 top-6 sm:top-1/2 transform -translate-x-1/2 sm:-translate-y-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-techno-dark border-2 border-techno-purple z-10">
+                        <span className="text-techno-purple font-bold text-lg">{step.id}</span>
                       </div>
                       
-                      {/* Círculo con número para pantallas medianas y grandes */}
-                      <div className="hidden sm:flex absolute left-16 lg:left-1/2 top-1/2 -translate-y-1/2 transform -translate-x-1/2 items-center justify-center w-10 h-10 rounded-full bg-techno-dark border-2 border-techno-purple z-10">
-                        <span className="text-techno-purple font-bold">{step.id}</span>
-                      </div>
-                      
-                      <div className={`sm:pr-16 lg:pr-24 ${index % 2 === 0 ? 'lg:text-right sm:col-start-1' : 'sm:col-start-2 lg:pl-24 sm:pl-16'}`}>
-                        <div className="bg-techno-light/20 backdrop-blur-sm p-6 rounded-lg border border-techno-purple/20 hover:border-techno-purple/40 transition-all">
-                          <div className="flex items-center space-x-3">
-                            <div className="rounded-full bg-techno-purple/10 p-2 inline-flex ring-1 ring-techno-purple/30">
-                              <Icon className="h-5 w-5 text-techno-purple" />
+                      <div className={`pl-24 sm:pl-0 ${index % 2 === 0 ? 'sm:pr-16 lg:pr-24 sm:text-right sm:col-start-1' : 'sm:pl-16 lg:pl-24 sm:col-start-2'}`}>
+                        <div className="bg-techno-dark/80 backdrop-blur-sm p-6 rounded-lg border border-techno-purple/20 hover:border-techno-purple/40 transition-all">
+                          <div className="flex items-center gap-3 sm:justify-end">
+                            <div className="rounded-xl bg-techno-purple/10 p-2.5 inline-flex ring-1 ring-techno-purple/30">
+                              <Icon className="h-6 w-6 text-techno-purple" />
                             </div>
                             <h3 className="text-xl font-semibold text-white">{step.title}</h3>
                           </div>

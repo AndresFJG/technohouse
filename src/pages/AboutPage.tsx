@@ -25,25 +25,25 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    id: "sarah-johnson",
-    name: 'Sarah Johnson',
-    role: 'CEO & Fundadora',
+    id: "andres-jaramillo",
+    name: 'Andrés Felipe Jaramillo',
+    role: 'CEO & Fundador',
     image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-    bio: 'Visionaria tecnológica con más de 15 años de experiencia en transformación digital.',
+    bio: 'Visionario tecnológico con más de 2 años de experiencia en transformación digital, experto en IA y aprendizaje automático, liderando nuestras iniciativas de innovación.',
     skills: ['Liderazgo', 'Estrategia', 'Innovación'],
     social: {
-      linkedin: '#',
+      linkedin: 'https://www.linkedin.com/in/andr%C3%A9s-felipe-jaramillo-galindo-60170531a/',
       twitter: '#',
-      github: '#'
+      github: 'https://github.com/AndresFJG'
     }
   },
   {
-    id: "michael-chen",
-    name: 'Michael Chen',
-    role: 'CTO',
+    id: "nicolas-gomez",
+    name: 'Nicolas Gomez',
+    role: 'Desarrollador de arquitectura de software.',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
-    bio: 'Experto en IA y aprendizaje automático, liderando nuestras iniciativas de innovación.',
-    skills: ['IA', 'ML', 'Cloud'],
+    bio: 'Programador backend en Lenguajes como Ruby, Java y C#',
+    skills: ['Ruby', 'Java', 'C#', 'Mysql', 'Spring Boot', 'Net.'],
     social: {
       linkedin: '#',
       twitter: '#',
@@ -51,9 +51,9 @@ const teamMembers: TeamMember[] = [
     }
   },
   {
-    id: "emily-rodriguez",
-    name: 'Emily Rodriguez',
-    role: 'Directora de Diseño',
+    id: "felipe-sanabria",
+    name: 'Felipe Sanabria',
+    role: 'Director de Diseño',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     bio: 'Especialista en UX enfocada en crear experiencias digitales intuitivas.',
     skills: ['UX/UI', 'Diseño', 'Prototipado'],
@@ -64,9 +64,9 @@ const teamMembers: TeamMember[] = [
     }
   },
   {
-    id: "david-wilson",
-    name: 'David Wilson',
-    role: 'Desarrollador Frontend',
+    id: "sergio-martinez",
+    name: 'Sergio Martinez',
+    role: 'Automatización',
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     bio: 'Especialista en frameworks modernos y experiencias web de alto rendimiento.',
     skills: ['React', 'TypeScript', 'UI/UX'],
@@ -90,8 +90,8 @@ const teamMembers: TeamMember[] = [
     }
   },
   {
-    id: "alex-thompson",
-    name: 'Alex Thompson',
+    id: "edwin-murillo",
+    name: 'Edwin Murillo',
     role: 'DevOps Engineer',
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80',
     bio: 'Especialista en automatización y despliegue continuo de aplicaciones.',
@@ -121,22 +121,22 @@ const teamMembers: TeamMember[] = [
 const achievements = [
   { 
     icon: Cpu, 
-    title: '15+ Proyectos', 
+    title: '5+ Proyectos', 
     description: 'Implementados con éxito para startups y empresas' 
   },
   { 
     icon: Users, 
-    title: '500+ Clientes', 
+    title: '50+ Clientes', 
     description: 'Satisfechos con nuestras soluciones tecnológicas' 
   },
   { 
     icon: Globe, 
-    title: '10+ Países', 
+    title: '3+ Países', 
     description: 'Alcance internacional de nuestros servicios' 
   },
   { 
     icon: Award, 
-    title: '8 Premios', 
+    title: '2 Premios', 
     description: 'Por innovación tecnológica y excelencia' 
   }
 ];
@@ -226,55 +226,55 @@ export function AboutPage() {
       </section>
 
       {/* ===== SECCIÓN VALORES (EDGE TO EDGE) ===== */}
-      <section className="relative py-16 sm:py-20 w-full" aria-labelledby="valores-heading">
+      <section className="relative py-12 sm:py-16 md:py-20 w-full" aria-labelledby="valores-heading">
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-8 lg:px-12">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 sm:mb-12">
             <div className="inline-block mx-auto">
-              <h2 id="valores-heading" className="text-2xl sm:text-3xl font-extrabold text-white techno-border pb-2">
+              <h2 id="valores-heading" className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white techno-border pb-2">
                 Nuestros Valores
               </h2>
               <div className="h-0.5 w-2/3 bg-techno-purple mx-auto"></div>
             </div>
-            <p className="text-gray-300 max-w-2xl mx-auto mt-4">
+            <p className="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto mt-3 sm:mt-4 px-4 sm:px-0">
               Nuestros principios fundamentales que guían cada decisión y definen nuestra cultura empresarial como startup tecnológica
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {/* Valor 1: Innovación */}
-            <div className="bg-techno-light/20 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-techno-purple/20 hover:border-techno-purple/50 transition-all group relative overflow-hidden h-full">
+            <div className="bg-techno-light/20 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-lg border border-techno-purple/20 hover:border-techno-purple/50 transition-all group relative overflow-hidden h-full">
               <div className="absolute top-0 left-0 w-full h-full bg-techno-grid opacity-5 rounded-lg pointer-events-none"></div>
-              <div className="rounded-full bg-techno-purple/10 p-3 inline-flex ring-1 ring-techno-purple/30 group-hover:ring-techno-purple/60">
-                <Code className="h-6 w-6 text-techno-purple" />
+              <div className="rounded-full bg-techno-purple/10 p-2.5 sm:p-3 inline-flex ring-1 ring-techno-purple/30 group-hover:ring-techno-purple/60">
+                <Code className="h-5 w-5 sm:h-6 sm:w-6 text-techno-purple" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-white group-hover:text-techno-purple transition-colors">Innovación</h3>
-              <p className="mt-2 text-gray-400 group-hover:text-gray-300 transition-colors">
+              <h3 className="mt-3 sm:mt-4 text-lg sm:text-xl font-semibold text-white group-hover:text-techno-purple transition-colors">Innovación</h3>
+              <p className="mt-2 text-sm sm:text-base text-gray-400 group-hover:text-gray-300 transition-colors">
                 Impulsamos constantemente los límites de lo posible, buscando soluciones creativas para desafíos complejos.
               </p>
               <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-techno-purple to-blue-500 group-hover:w-full transition-all duration-500"></div>
             </div>
             
             {/* Valor 2: Excelencia */}
-            <div className="bg-techno-light/20 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-techno-purple/20 hover:border-techno-purple/50 transition-all group relative overflow-hidden h-full">
+            <div className="bg-techno-light/20 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-lg border border-techno-purple/20 hover:border-techno-purple/50 transition-all group relative overflow-hidden h-full">
               <div className="absolute top-0 left-0 w-full h-full bg-techno-grid opacity-5 rounded-lg pointer-events-none"></div>
-              <div className="rounded-full bg-techno-purple/10 p-3 inline-flex ring-1 ring-techno-purple/30 group-hover:ring-techno-purple/60">
-                <Zap className="h-6 w-6 text-techno-purple" />
+              <div className="rounded-full bg-techno-purple/10 p-2.5 sm:p-3 inline-flex ring-1 ring-techno-purple/30 group-hover:ring-techno-purple/60">
+                <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-techno-purple" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-white group-hover:text-techno-purple transition-colors">Excelencia</h3>
-              <p className="mt-2 text-gray-400 group-hover:text-gray-300 transition-colors">
+              <h3 className="mt-3 sm:mt-4 text-lg sm:text-xl font-semibold text-white group-hover:text-techno-purple transition-colors">Excelencia</h3>
+              <p className="mt-2 text-sm sm:text-base text-gray-400 group-hover:text-gray-300 transition-colors">
                 Nos comprometemos con la más alta calidad en todo lo que hacemos, superando expectativas en cada proyecto.
               </p>
               <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-techno-purple to-blue-500 group-hover:w-full transition-all duration-500"></div>
             </div>
             
             {/* Valor 3: Colaboración */}
-            <div className="bg-techno-light/20 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-techno-purple/20 hover:border-techno-purple/50 transition-all group relative overflow-hidden h-full">
+            <div className="bg-techno-light/20 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-lg border border-techno-purple/20 hover:border-techno-purple/50 transition-all group relative overflow-hidden h-full">
               <div className="absolute top-0 left-0 w-full h-full bg-techno-grid opacity-5 rounded-lg pointer-events-none"></div>
-              <div className="rounded-full bg-techno-purple/10 p-3 inline-flex ring-1 ring-techno-purple/30 group-hover:ring-techno-purple/60">
-                <Users className="h-6 w-6 text-techno-purple" />
+              <div className="rounded-full bg-techno-purple/10 p-2.5 sm:p-3 inline-flex ring-1 ring-techno-purple/30 group-hover:ring-techno-purple/60">
+                <Users className="h-5 w-5 sm:h-6 sm:w-6 text-techno-purple" />
               </div>
-              <h3 className="mt-4 text-xl font-semibold text-white group-hover:text-techno-purple transition-colors">Colaboración</h3>
-              <p className="mt-2 text-gray-400 group-hover:text-gray-300 transition-colors">
+              <h3 className="mt-3 sm:mt-4 text-lg sm:text-xl font-semibold text-white group-hover:text-techno-purple transition-colors">Colaboración</h3>
+              <p className="mt-2 text-sm sm:text-base text-gray-400 group-hover:text-gray-300 transition-colors">
                 Creemos en el poder del trabajo en equipo y las asociaciones estratégicas para alcanzar resultados extraordinarios.
               </p>
               <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-techno-purple to-blue-500 group-hover:w-full transition-all duration-500"></div>
@@ -348,90 +348,90 @@ export function AboutPage() {
           </div>
 
           {/* Cronología de Experiencia - Diseño Vertical con Línea Temporal */}
-          <div className="relative mb-20 mt-20 max-w-4xl mx-auto">
+          <div className="relative mb-12 sm:mb-20 mt-12 sm:mt-20 max-w-4xl mx-auto px-4 sm:px-0">
             {/* Línea central vertical */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-techno-purple/50"></div>
+            <div className="absolute left-8 sm:left-1/2 top-0 bottom-0 w-px bg-techno-purple/50 sm:transform sm:-translate-x-1/2"></div>
             
-            <div className="space-y-24 relative">
+            <div className="space-y-12 sm:space-y-24 relative">
               {/* Punto 1 - El Inicio */}
               <div className="relative">
-                <div className="flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-techno-dark border-2 border-techno-purple z-10">
-                  <span className="text-techno-purple font-bold text-xl">01</span>
+                <div className="flex items-center justify-center absolute left-8 sm:left-1/2 transform -translate-x-1/2 w-12 sm:w-16 h-12 sm:h-16 rounded-full bg-techno-dark border-2 border-techno-purple z-10">
+                  <span className="text-techno-purple font-bold text-lg sm:text-xl">01</span>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="hidden md:block"></div>
-                  <div className="md:pl-12 pt-8 pb-4 rounded-lg bg-techno-light/10 backdrop-blur-sm border border-techno-purple/20 hover:border-techno-purple/40 transition-all p-6 shadow-lg shadow-techno-purple/5">
-                    <div className="text-2xl font-semibold text-white mb-3 flex items-center">
+                <div className="ml-16 sm:ml-0 sm:grid sm:grid-cols-2 sm:gap-6">
+                  <div className="pt-4 sm:pt-8 pb-4 rounded-lg bg-techno-light/10 backdrop-blur-sm border border-techno-purple/20 hover:border-techno-purple/40 transition-all p-4 sm:p-6 shadow-lg shadow-techno-purple/5">
+                    <div className="text-xl sm:text-2xl font-semibold text-white mb-2 sm:mb-3 flex items-center">
                       <span className="text-techno-purple mr-2">2018</span>
                       <span>El Inicio</span>
                     </div>
-                    <p className="text-gray-300">
+                    <p className="text-sm sm:text-base text-gray-300">
                       Fundamos nuestra startup con una visión clara: revolucionar la forma en que las empresas utilizan la tecnología. Comenzamos con un equipo pequeño pero apasionado por transformar el mundo digital.
                     </p>
                   </div>
+                  <div className="hidden sm:block"></div>
                 </div>
               </div>
               
               {/* Punto 2 - Expansión */}
               <div className="relative">
-                <div className="flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-techno-dark border-2 border-techno-purple z-10">
-                  <span className="text-techno-purple font-bold text-xl">02</span>
+                <div className="flex items-center justify-center absolute left-8 sm:left-1/2 transform -translate-x-1/2 w-12 sm:w-16 h-12 sm:h-16 rounded-full bg-techno-dark border-2 border-techno-purple z-10">
+                  <span className="text-techno-purple font-bold text-lg sm:text-xl">02</span>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="md:pr-12 pt-8 pb-4 rounded-lg bg-techno-light/10 backdrop-blur-sm border border-techno-purple/20 hover:border-techno-purple/40 transition-all p-6 shadow-lg shadow-techno-purple/5 md:text-right">
-                    <div className="text-2xl font-semibold text-white mb-3 md:flex md:justify-end md:items-center">
-                      <span className="text-techno-purple mr-2 md:order-2 md:ml-2 md:mr-0">2020</span>
+                <div className="ml-16 sm:ml-0 sm:grid sm:grid-cols-2 sm:gap-6">
+                  <div className="hidden sm:block"></div>
+                  <div className="pt-4 sm:pt-8 pb-4 rounded-lg bg-techno-light/10 backdrop-blur-sm border border-techno-purple/20 hover:border-techno-purple/40 transition-all p-4 sm:p-6 shadow-lg shadow-techno-purple/5">
+                    <div className="text-xl sm:text-2xl font-semibold text-white mb-2 sm:mb-3 flex items-center">
+                      <span className="text-techno-purple mr-2">2020</span>
                       <span>Expansión</span>
                     </div>
-                    <p className="text-gray-300">
+                    <p className="text-sm sm:text-base text-gray-300">
                       Tras nuestro primer gran éxito con clientes internacionales, expandimos nuestro equipo y cartera de servicios, incorporando soluciones avanzadas de IA y aprendizaje automático para resolver problemas complejos.
                     </p>
                   </div>
-                  <div className="hidden md:block"></div>
                 </div>
               </div>
               
               {/* Punto 3 - Reconocimiento */}
               <div className="relative">
-                <div className="flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-techno-dark border-2 border-techno-purple z-10">
-                  <span className="text-techno-purple font-bold text-xl">03</span>
+                <div className="flex items-center justify-center absolute left-8 sm:left-1/2 transform -translate-x-1/2 w-12 sm:w-16 h-12 sm:h-16 rounded-full bg-techno-dark border-2 border-techno-purple z-10">
+                  <span className="text-techno-purple font-bold text-lg sm:text-xl">03</span>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="hidden md:block"></div>
-                  <div className="md:pl-12 pt-8 pb-4 rounded-lg bg-techno-light/10 backdrop-blur-sm border border-techno-purple/20 hover:border-techno-purple/40 transition-all p-6 shadow-lg shadow-techno-purple/5">
-                    <div className="text-2xl font-semibold text-white mb-3 flex items-center">
+                <div className="ml-16 sm:ml-0 sm:grid sm:grid-cols-2 sm:gap-6">
+                  <div className="pt-4 sm:pt-8 pb-4 rounded-lg bg-techno-light/10 backdrop-blur-sm border border-techno-purple/20 hover:border-techno-purple/40 transition-all p-4 sm:p-6 shadow-lg shadow-techno-purple/5">
+                    <div className="text-xl sm:text-2xl font-semibold text-white mb-2 sm:mb-3 flex items-center">
                       <span className="text-techno-purple mr-2">2022</span>
                       <span>Reconocimiento</span>
                     </div>
-                    <p className="text-gray-300">
+                    <p className="text-sm sm:text-base text-gray-300">
                       Nuestras innovadoras soluciones tecnológicas nos valieron reconocimiento en la industria y varios premios prestigiosos, posicionándonos como referentes en el campo de la transformación digital.
                     </p>
                   </div>
+                  <div className="hidden sm:block"></div>
                 </div>
               </div>
               
               {/* Punto 4 - Innovación Continua */}
               <div className="relative">
-                <div className="flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-techno-dark border-2 border-techno-purple z-10">
-                  <span className="text-techno-purple font-bold text-xl">04</span>
+                <div className="flex items-center justify-center absolute left-8 sm:left-1/2 transform -translate-x-1/2 w-12 sm:w-16 h-12 sm:h-16 rounded-full bg-techno-dark border-2 border-techno-purple z-10">
+                  <span className="text-techno-purple font-bold text-lg sm:text-xl">04</span>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="md:pr-12 pt-8 pb-4 rounded-lg bg-techno-light/10 backdrop-blur-sm border border-techno-purple/20 hover:border-techno-purple/40 transition-all p-6 shadow-lg shadow-techno-purple/5 md:text-right">
-                    <div className="text-2xl font-semibold text-white mb-3 md:flex md:justify-end md:items-center">
-                      <span className="text-techno-purple mr-2 md:order-2 md:ml-2 md:mr-0">Hoy</span>
+                <div className="ml-16 sm:ml-0 sm:grid sm:grid-cols-2 sm:gap-6">
+                  <div className="hidden sm:block"></div>
+                  <div className="pt-4 sm:pt-8 pb-4 rounded-lg bg-techno-light/10 backdrop-blur-sm border border-techno-purple/20 hover:border-techno-purple/40 transition-all p-4 sm:p-6 shadow-lg shadow-techno-purple/5">
+                    <div className="text-xl sm:text-2xl font-semibold text-white mb-2 sm:mb-3 flex items-center">
+                      <span className="text-techno-purple mr-2">Hoy</span>
                       <span>Innovación Continua</span>
                     </div>
-                    <p className="text-gray-300">
+                    <p className="text-sm sm:text-base text-gray-300">
                       Seguimos redefiniendo los límites de lo posible, trabajando con las últimas tecnologías para ofrecer soluciones vanguardistas que transforman negocios en todo el mundo y definen el futuro digital.
                     </p>
                   </div>
-                  <div className="hidden md:block"></div>
                 </div>
               </div>
               
               {/* Punto final decorativo */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-12 w-8 h-8 rounded-full bg-techno-purple/30 blur-sm"></div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-8 w-4 h-4 rounded-full bg-techno-purple"></div>
+              <div className="absolute left-8 sm:left-1/2 transform -translate-x-1/2 -bottom-8 sm:-bottom-12 w-6 sm:w-8 h-6 sm:h-8 rounded-full bg-techno-purple/30 blur-sm"></div>
+              <div className="absolute left-8 sm:left-1/2 transform -translate-x-1/2 -bottom-6 sm:-bottom-8 w-3 sm:w-4 h-3 sm:h-4 rounded-full bg-techno-purple"></div>
             </div>
           </div>
 

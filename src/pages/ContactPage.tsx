@@ -41,12 +41,12 @@ export function ContactPage() {
               <span className="h-px w-8 bg-techno-purple"></span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-white sm:text-5xl">
-              Potencia tu <span className="text-techno-purple">Visión Digital</span>
+              Impulsa tu <span className="text-techno-purple">Proyecto Digital</span>
             </h1>
             <div className="h-0.5 w-1/3 bg-techno-purple mt-4 mx-auto"></div>
           </div>
           <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-            Estamos listos para transformar tus ideas en soluciones tecnológicas de vanguardia. Contáctanos hoy mismo y da el primer paso hacia el futuro digital.
+            Con el ritmo de la música electrónica y la precisión de la tecnología, transformamos tus ideas en soluciones digitales innovadoras.
           </p>
         </div>
 
@@ -66,8 +66,8 @@ export function ContactPage() {
                     <CheckCircle className="h-5 w-5 text-techno-purple" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">Innovación Constante</h3>
-                    <p className="mt-1 text-gray-400">Utilizamos las tecnologías más avanzadas para crear soluciones futuristas y eficientes.</p>
+                    <h3 className="text-xl font-semibold text-white">Innovación Rítmica</h3>
+                    <p className="mt-1 text-gray-400">Fusionamos la precisión del código con la creatividad de la música electrónica para crear soluciones únicas.</p>
                   </div>
                 </div>
                 
@@ -76,8 +76,8 @@ export function ContactPage() {
                     <CheckCircle className="h-5 w-5 text-techno-purple" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">Enfoque Personalizado</h3>
-                    <p className="mt-1 text-gray-400">Cada proyecto es único. Adaptamos nuestras soluciones a tus necesidades específicas.</p>
+                    <h3 className="text-xl font-semibold text-white">Tecnología de Vanguardia</h3>
+                    <p className="mt-1 text-gray-400">Utilizamos las últimas tecnologías y metodologías ágiles para mantener el ritmo de la innovación.</p>
                   </div>
                 </div>
                 
@@ -86,8 +86,8 @@ export function ContactPage() {
                     <CheckCircle className="h-5 w-5 text-techno-purple" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">Resultados Tangibles</h3>
-                    <p className="mt-1 text-gray-400">Nuestras soluciones generan valor real y medible para tu negocio desde el primer momento.</p>
+                    <h3 className="text-xl font-semibold text-white">Resultados Armoniosos</h3>
+                    <p className="mt-1 text-gray-400">Cada proyecto es una composición única que genera valor real y medible para tu negocio.</p>
                   </div>
                 </div>
               </div>
@@ -171,9 +171,9 @@ export function ContactPage() {
                     >
                       <option value="desarrollo">Desarrollo Web/App</option>
                       <option value="ia">Inteligencia Artificial</option>
-                      <option value="consultoria">Consultoría Tecnológica</option>
+                      <option value="cloud">Servicios Cloud</option>
                       <option value="automatizacion">Automatización de Procesos</option>
-                      <option value="otro">Otro Servicio</option>
+                      <option value="consultoria">Consultoría Tecnológica</option>
                     </select>
                   </div>
                   

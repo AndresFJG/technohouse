@@ -1,37 +1,68 @@
 import React from 'react';
-import { cn } from '../utils/cn';
+import { Link } from 'react-router-dom';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline' | 'techno' | 'subtle';
+interface ButtonProps {
+  children: React.ReactNode;
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
-  glow?: boolean;
+  href?: string;
+  onClick?: () => void;
+  className?: string;
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
+  fullWidth?: boolean;
 }
 
 export function Button({
-  className,
+  children,
   variant = 'primary',
   size = 'md',
-  glow = false,
-  ...props
+  href,
+  onClick,
+  className = '',
+  disabled = false,
+  type = 'button',
+  fullWidth = false,
 }: ButtonProps) {
+  const baseStyles = 'inline-flex items-center justify-center font-medium rounded-md transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-techno-purple disabled:opacity-50 disabled:cursor-not-allowed';
+  
+  const variants = {
+    primary: 'bg-techno-purple text-white hover:bg-techno-purple-light shadow-techno-sm hover:shadow-techno-md',
+    secondary: 'bg-techno-light text-white hover:bg-techno-light/80 shadow-techno-sm hover:shadow-techno-md',
+    outline: 'border-2 border-techno-purple text-techno-purple hover:bg-techno-purple/10',
+    ghost: 'text-techno-purple hover:bg-techno-purple/10',
+  };
+
+  const sizes = {
+    sm: 'px-3 py-1.5 text-sm',
+    md: 'px-4 py-2 text-base',
+    lg: 'px-6 py-3 text-lg',
+  };
+
+  const widthClass = fullWidth ? 'w-full' : '';
+
+  const buttonClasses = `${baseStyles} ${variants[variant]} ${sizes[size]} ${widthClass} ${className}`;
+
+  if (href) {
+    return (
+      <Link
+        to={href}
+        className={buttonClasses}
+        onClick={onClick}
+      >
+        {children}
+      </Link>
+    );
+  }
+
   return (
     <button
-      className={cn(
-        'relative inline-flex items-center justify-center rounded-md font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
-        {
-          'bg-techno-purple text-white hover:bg-techno-purple-light active:bg-techno-purple-dark': variant === 'primary',
-          'bg-techno-light text-white hover:bg-gray-800': variant === 'secondary',
-          'border-2 border-techno-purple text-techno-purple hover:bg-techno-purple/10': variant === 'outline',
-          'bg-techno-dark border border-techno-purple text-white shadow-techno-sm hover:shadow-techno': variant === 'techno',
-          'bg-transparent text-white hover:bg-techno-purple/10': variant === 'subtle',
-          'h-9 px-4 text-sm': size === 'sm',
-          'h-10 px-6 text-base': size === 'md',
-          'h-12 px-8 text-lg': size === 'lg',
-          'pulse-glow': glow,
-        },
-        className
-      )}
-      {...props}
-    />
+      type={type}
+      className={buttonClasses}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {children}
+    </button>
   );
 }
